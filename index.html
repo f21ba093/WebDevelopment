@@ -1,1 +1,68 @@
-Hello World!!!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テキストにスタイル設定</title>
+    <style>
+        /*  複数行コメント
+            書けちゃいます
+        */
+        h1 {
+            font-size: 2.5em;
+            font-family: cursive;
+            color: #ff0000;
+        }
+        h2 {
+            font-size: 2.0em;
+            font-family: fantasy;
+            color: rgb(0, 255, 255);
+        }
+        p {
+            font-size: 1.2em;
+            font-family: sans-serif;
+            color: blue;
+        }
+        span {
+            font:bold italic 1.7em serif;
+            background-color: magenta;
+            color: white;
+        }
+        h3 {
+            color: white !important;
+            /* !important を入れるとなりよりも優先される */
+            background-color: black;
+            font-size: 200%;
+        }
+        /* id指定は「#」 で始まる*/
+        #name {
+            color: black;
+        }
+        h4 {
+            background-color: black;
+            
+        }
+        /* class指定は「.」で始まる*/
+        .shiro {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- ctrl押しながら K + C でコメント -->
+    <h1>Hello!Tani</h1>
+    <!-- id="" はめちゃめちゃ重要！！！ -->
+    <h1 id="name">ABCDEFG</h1>
+    <h2>Hello!Tani</h2>
+    <!-- タグの中にタグを入れることが出来る！！！ -->
+    <p>This is <span>Sample</span> content.</p>
+    <!-- 白文字、黒背景でフォント200%で作ってください -->
+    <h3>ああああああああああああ</h3>
+    <h3 style="color: #00ff00; font-size: 300%;">タグ直書きは優先度が高い</h3>
+    <h4>1</h4>
+    <h4 class="shiro">2</h4>
+    <h4 class="shiro">3</h4>
+    <h4>4</h4>
+</body>
+</html>
