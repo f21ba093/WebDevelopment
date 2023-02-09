@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登山</title>
+    <style>
+        body {
+            background-image: url("mountain_yama.png");
+        }
+        p {
+            font-size:300%;
+            color:aliceblue;
+            background-color: rgb(8, 11, 210);
+            text-align:center;
+        }
+        #yama {
+            padding:1% 0% 1% 20%;
+        }
+        .fukidashi {
+            font-size: 100%;
+            position: relative;
+            padding: 20px;
+            background-color: #fff3ad;
+            color:blueviolet; 
+            display: inline-block; 
+            margin:1% 1% 0% 30%; 
+            font-family: 'arial black',serif;
+            font-weight: bold;
+            
+        }
+        .fukidashi::before{
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            background-color: #fff3ad;
+            left: -35px;
+            bottom: 15px;
+            width: 30px;
+            height: 30px;
+        }
+        .fukidashi::after{
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            background-color: #fff3ad;
+            left: -55px;
+            bottom: 10px;
+            width: 15px;
+            height: 15px;
+        }
+        h1{
+            display:inline-block;
+            color:aliceblue;
+            background-color: rgb(8, 11, 210);
+        }
+        #backbtn{
+            position: absolute;
+            left: 30%;
+            min-width: 30px;
+            max-width: 100px;
+            font-size: 200%;
+        }
+        #nextbtn{
+            position: absolute;
+            left: 60%;
+            min-width: 30px;
+            max-width: 100px;
+            font-size: 200%;
+        }
+    </style>
+    <script>
+        var i = 1;
+
+        function back1() {
+            if(i == 1){
+                i = 7;
+            }else{
+                i--;
+            }
+            document.getElementById("yama").src= "yama" + i + ".JPG";
+            // alert(i);
+        }
+        function next1() {
+            if(i == 7){
+                i = 1;
+            }else{
+                i++;
+            }
+            document.getElementById("yama").src= "yama" + i + ".JPG";
+            // alert(i);
+        }
+    </script>
+</head>
+<body>
+    <p>地蔵岳に登ったよ！</p>
+    <div class="fukidashi">
+        体を動かす一環として山に登りました<br>
+        運動はめっきりしなくなりましたが、いいものですね
+    </div>
+    <br>
+    <img src="mukiryoku_man.png" width="330" height="300" >
+    <br>
+    <h1>＜ 実際に行って撮った写真 ＞</h1>
+    <img id="yama" src="yama1.JPG" width="60%" height="60%" ><br>
+    <button id="backbtn" onclick="back1()">戻る</button>
+    <button id="nextbtn" onclick="next1()">次へ</button>
+</body>
+</html>
